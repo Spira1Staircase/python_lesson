@@ -1,3 +1,4 @@
+#while文(breakなし)
 #xの平方根を求める
 x = 2
 #
@@ -14,4 +15,3 @@ while (diff > 1.0E-6):
     diff = r1 - r2
     if (diff < 0):
         diff = -diff
-        

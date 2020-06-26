@@ -1,3 +1,4 @@
+#while文（break利用）
 x = 2
 rnew = x
 while True:
