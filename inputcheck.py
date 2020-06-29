@@ -1,3 +1,4 @@
+# 例外処理
 while True:
     x = input("正の値を入力してください")
     try:
