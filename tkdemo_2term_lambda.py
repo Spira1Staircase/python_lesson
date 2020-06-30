@@ -55,7 +55,7 @@ def show_number(num):
     e.insert(0,str(num))
 
 # tkinter での画面構成
-root = tk.TK()
+root = tk.Tk()
 f = tk.Frame(root)
 f.grid()
 
@@ -79,18 +79,18 @@ be = tk.Button(f,text='=', command=eq)
 
 
 b1.grid(row=3,column=0)
-b1.grid(row=3,column=1)
-b1.grid(row=3,column=2)
-b1.grid(row=2,column=0)
-b1.grid(row=2,column=1)
-b1.grid(row=2,column=2)
-b1.grid(row=1,column=0)
-b1.grid(row=1,column=1)
-b1.grid(row=1,column=2)
-b1.grid(row=4,column=0)
-b1.grid(row=1,column=3)
-b1.grid(row=4,column=3)
-b1.grid(row=2,column=3)
+b2.grid(row=3,column=1)
+b3.grid(row=3,column=2)
+b4.grid(row=2,column=0)
+b5.grid(row=2,column=1)
+b6.grid(row=2,column=2)
+b7.grid(row=1,column=0)
+b8.grid(row=1,column=1)
+b9.grid(row=1,column=2)
+b0.grid(row=4,column=0)
+bc.grid(row=1,column=3)
+be.grid(row=4,column=3)
+bp.grid(row=2,column=3)
 
 
 #数値を表示するウィジェット
