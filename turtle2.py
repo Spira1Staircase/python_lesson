@@ -1,7 +1,10 @@
-from turtle import *
-n = 5
-for i in range(n):
+# from turtle import *
+# n = 5
+# for i in range(n):
 
+# done()
+
+# 以下 Turtle モジュールの主な関数
 #  forward(d): d だけ前進。fd(d) も同じ。
 #  back(d), bk(d), backword(d): 後退
 #  right(a), rt(a): 右へ a 度回転
