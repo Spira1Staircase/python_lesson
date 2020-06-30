@@ -1,0 +1,10 @@
+from turtle import *
+forword(100)
+left(90)
+forword(100)
+left(90)
+forword(100)
+left(90)
+forword(100)
+left(90)
+done()
