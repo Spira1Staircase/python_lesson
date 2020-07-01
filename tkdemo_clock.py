@@ -9,30 +9,30 @@ class MyFrame(tk.Frame):
 
 # キャンバスの作成
 #
-    self.size = 200
-    self.clock = tk.Canvas(self, width=self.size, height=self.size,background="white")
-    self.clock.grid(row=0, column=0)
+        self.size = 200
+        self.clock = tk.Canvas(self, width=self.size, height=self.size,background="white")
+        self.clock.grid(row=0, column=0)
 #
 # 文字盤の描画
 #
-    self.font_size = int(self.size/15)
-    for number in range(1,12+1):
-        x = self.size/2 + math.cos(math.radians(number*360/12 - 90))*self.size/2*0.85
-        y = self.size/2 + math.sin(math.radians(number*360/12 - 90))*self.size/2*0.85
-        self.clock.create_text(x,y,text=str(number), fill="black",font =("",14))
-        self.b = tk.Button(self, text="Show Date", font=("",14),command = self.toggle)
+        self.font_size = int(self.size/15)
 
-    self.b.grid(row = 1, column = 0)
+        for number in range(1,12+1):
+            x = self.size/2 + math.cos(math.radians(number*360/12 - 90))*self.size/2*0.85
+            y = self.size/2 + math.sin(math.radians(number*360/12 - 90))*self.size/2*0.85
+            self.clock.create_text(x,y,text=str(number), fill="black",font =("",14))
+        self.b = tk.Button(self, text="Show Date", font=("",14),command = self.toggle)
+        self.b.grid(row = 1, column = 0)
     #
     # 時刻の経過確認などの動作のためのインスタンス変数
     #
-    self.sec = time.localtime().tm_sec
-    self.sec2 = time.localtime().tm_sec
-    self.min = time.localtime().tm_min
-    self.hour = time.localtime().tm_hour
-    self.start = True
-    self.show_date = False
-    self.toggled = True
+        self.sec = time.localtime().tm_sec
+        self.sec2 = time.localtime().tm_sec
+        self.min = time.localtime().tm_min
+        self.hour = time.localtime().tm_hour
+        self.start = True
+        self.show_date = False
+        self.toggled = True
     #
     # ボタンが押されたときの call back
     #
@@ -81,7 +81,7 @@ class MyFrame(tk.Frame):
             y = self.size/2 + math.sin(angle)*self.size/2*0.55
             self.clock.delete("HOUR")
             self.clock.create_line(x0,y0,x,y, width=3, fill="green", tag="HOUR")
-            self.start = False
+        self.start = False
  #
  # 日付の描画, 秒が変わるか、ボタンが押されたとき
  #
@@ -93,14 +93,14 @@ class MyFrame(tk.Frame):
             text = time.strftime('%Y/%m/%d %H:%M:%S')
             self.clock.delete("TIME")
 
-        if self.show_date:
-            self.clock.create_text(x, y, text=text, font=("",12), fill="black", tag="TIME")
+            if self.show_date:
+                self.clock.create_text(x, y, text=text, font=("",12), fill="black", tag="TIME")
             #
             # 100 ミリ秒後に再度呼び出す
             #
-            self.after(100, self.display)
-            root = tk.Tk()
-            f = MyFrame(root)
-            f.pack()
-            f.display()
-            root.mainloop()
+        self.after(100, self.display)
+root = tk.Tk()
+f = MyFrame(root)
+f.pack()
+f.display()
+root.mainloop()
