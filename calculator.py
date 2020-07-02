@@ -8,7 +8,7 @@ class Dentaku():
     def do_opelation(self):
         if self.opelation == "+":
             self.result = self.first_term + self.second_term
-        else self.opelation == "-":
+        elif self.opelation == "-":
             self.result = self.first_term - self.second_term
 
 dentaku = Dentaku()
